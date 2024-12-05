@@ -1,16 +1,21 @@
-# app
+Aplikacija bi trebala raditi u trenutnom stanju ali bez senzora temperature
+Svi trenutni omoguceni senzori se koriste preko sensors_plus package-a, no on ima samo 4 senzora na raspolaganju, dokumentacija za package se nalazi na sljedecem linku:
+[https://pub.dev/packages/sensors_plus](https://pub.dev/packages/sensors_plus)
 
-A new Flutter project.
+za ostale senzore potrebno je koristiti druge package-e poput environment_sensors, u mom slucaju sam njega koristio jer nudi druge razne senzore. Dokumentacija:
+[https://pub.dev/packages/environment_sensors/example](https://pub.dev/packages/environment_sensors)
 
-## Getting Started
+#Problem
 
-This project is a starting point for a Flutter application.
+Kako bi vidjeli problem s kojim se patim trebate naparviti par koraka
 
-A few resources to get you started if this is your first Flutter project:
+1. instalirati environment_sensors
+   izvrsite ovu komandu u terminalu: flutter pub add environment_sensors
+   ili dodajte: "environment_sensors: ^0.3.0" pod dependecies u pubspec.ymal file-u i stisnte na pub get
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+2. otkomentirajte zakomentirani kod u main.dart (gumb koji vodi na temperature_screen) i import za tempreature screen
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+3. pokrenite aplikaciju
+
+#slika errora
+![image](https://github.com/user-attachments/assets/16e379f2-7ac1-481b-8965-573e58463c5b)
